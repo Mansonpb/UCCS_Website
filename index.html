@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Club Counter-Strike</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="openTab(event, 'home')">Home</div>
+            <div class="tab" onclick="openTab(event, 'schedule')">Schedule</div>
+        </div>
+
+        <div id="home" class="tab-content active">
+            <img src="images/logo.png" alt="Club Logo" class="logo">
+            <h1>Join the UC Counter-Strike!</h1>
+            <p>Are you passionate about Counter-Strike? Whether you're a seasoned pro or just getting started, our club is the perfect place for you! We are a competitive and casual club with multiple teams you can try out for. Our Discord community is always buzzing with people looking for pick-up games (PUGs), and we regularly host events to keep things exciting.</p>
+            
+            <p>In the past, we've organized 10-mans and wingman matches, and we have plenty more events planned for the future. Join our Discord <a href="https://discord.gg/Sjqczf6DXX" target="_blank">here</a> to stay updated on our events and teams.</p>
+            
+            <h2>📅 Upcoming Events:</h2>
+                <ul>
+                    <li><strong>Elections:</strong> Participate in our club elections during the first week of classes (August 26-30).</li>
+                    <li><strong>Team Tryouts:</strong> Join us for tryouts during the second week of classes (September 1-6). All skill levels and ranks are welcome. The tryout schedule is as follows:
+                        <ul>
+                            <li><strong>Sunday, 9/01:</strong> 7-8 PM (Online)</li>
+                            <li><strong>Monday, 9/02:</strong> 7-8 PM (Online)</li>
+                            <li><strong>Tuesday, 9/03:</strong> 7-8 PM (Online)</li>
+                            <li><strong>Thursday, 9/05:</strong> 7-8 PM (Online)</li>
+                        </ul>
+                        Come and have a great time with us! Be on the lookout for an announcement about an Lan tryout day 👀!
+                    </li>
+                </ul>
+
+
+            <p>We look forward to seeing everyone and be on the lookout for our announcements!</p>
+
+            <h2>📱 Follow Us on Social Media:</h2>
+            <div class="button-container">
+                <button class="social-button" onclick="window.open('https://twitter.com/UCCSGO', '_blank')">Twitter</button>
+                <button class="social-button" onclick="window.open('https://discord.gg/Sjqczf6DXX', '_blank')">Counter Strike Discord</button>
+                <button class="social-button" onclick="window.open('Discord Link 2', '_blank')">UC Esports Discord</button>
+            </div>
+        </div>
+
+        <div id="schedule" class="tab-content">
+            <h2>📅 Team Schedules</h2>
+            <ul>
+                <li><strong>Team A:</strong> Match 1 on (Date) at (Time)</li>
+                <li><strong>Team B:</strong> Match 2 on (Date) at (Time)</li>
+                <li><strong>Team C:</strong> Match 3 on (Date) at (Time)</li>
+                <!-- Add more matches and details as necessary -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('home').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
